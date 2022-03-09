@@ -71,7 +71,7 @@ jobs:
       #     push: true
       #     tags: ${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
 
-  build_and_check_docker_image:
+  push_docker_image:
     if: ${{ github.ref == 'refs/heads/master' }}  # push only when merged to master; cached form 'Build and Load' step
     needs: build_and_check_docker_image
     runs-on: ubuntu-latest
