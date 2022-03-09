@@ -17,7 +17,7 @@ env:
   IMAGE_DOCKERFILE_DIR: "./pyenv_python"
   IMAGE_NAME: "ghcr.io/${{ github.repository }}/pyenv_python"
   IMAGE_TAG: "v1"
-  IMAGE_ARCHITECTURES: "linux/amd64,linux/arm,linux/arm64"
+  IMAGE_ARCHITECTURES: linux/amd64,linux/arm,linux/arm64
 
 jobs:
   create-docker-image:
