@@ -6,17 +6,17 @@ on:
       - master
     paths:
       - 'pyenv_python/**'
-      - '.github/workflows/build_push.yml'
+      - '.github/workflows/build_image_pyenv_python.yml'
 
   pull_request:
     paths:
       - 'pyenv_python/**'
-      - '.github/workflows/build_push.yml'
+      - '.github/workflows/build_image_pyenv_python.yml'
 
 env:
-  IMAGE_DOCKERFILE_DIR: "./pyenv_python"
-  IMAGE_NAME: "ghcr.io/${{ github.repository }}/pyenv_python"
-  IMAGE_TAG: "v1"
+  IMAGE_DOCKERFILE_DIR: ./pyenv_python
+  IMAGE_NAME: ghcr.io/${{ github.repository }}/pyenv_python
+  IMAGE_TAG: v1
   IMAGE_ARCHITECTURES: linux/amd64,linux/arm,linux/arm64
 
 jobs:
