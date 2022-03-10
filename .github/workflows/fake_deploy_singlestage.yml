@@ -38,8 +38,6 @@ jobs:
           cache-from: type=registry,ref=${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
           cache-to: type=inline
 
-      - name: Test Image
-        run: docker run --rm ${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
 
 # ------------------------------------------------------------------------
   # This job builds an image from scratch every time without cache
@@ -68,6 +66,3 @@ jobs:
           context: ${{env.IMAGE_DIR}}
           platforms: ${{env.IMAGE_ARCHS}}
           tags: ${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
-
-      - name: Test Image
-        run: docker run --rm ${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
