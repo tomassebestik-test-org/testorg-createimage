@@ -47,7 +47,8 @@ jobs:
           platforms: ${{env.IMAGE_ARCHS}}
           push: true
           tags: ${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
-
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
 # # ------------------------------------------------------------------------
 #   # This job builds an image from scratch every time without cache
