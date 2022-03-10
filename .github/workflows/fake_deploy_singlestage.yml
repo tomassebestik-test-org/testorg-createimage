@@ -36,7 +36,7 @@ jobs:
           platforms: ${{env.IMAGE_ARCHS}}
           tags: ${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
           # Push only when merged to master
-          push: ${{ github.event.pull_request.merged == true }}
+          push: ${{ github.event_name != 'pull_request' }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
