@@ -30,3 +30,5 @@ RUN : \
         zlib1g-dev \
     && rm -rf /var/lib/apt/lists/* \
     && :
+
+RUN true
