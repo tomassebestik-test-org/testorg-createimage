@@ -38,7 +38,6 @@ jobs:
           cache-from: type=registry,ref=${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
           cache-to: type=inline
 
-
 # ------------------------------------------------------------------------
   # This job builds an image from scratch every time without cache
   fake_deploy_no_cache_single:
