@@ -38,7 +38,6 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-
 # ------------------------------------------------------------------------
   # This job builds an image from scratch every time without cache
   fake_deploy_no_cache_single:
