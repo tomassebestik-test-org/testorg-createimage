@@ -29,7 +29,7 @@ jobs:
           username: ${{github.actor}}
           password: ${{secrets.GITHUB_TOKEN}}
 
-      - name: Build
+      - name: Build image
         uses: docker/build-push-action@v2
         with:
           context: ${{env.IMAGE_DIR}}
@@ -38,8 +38,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      # Push only when merged to master; cached form 'Build and Load' step
-      - name: Build and Push
+      # Push only when merged to master; cached form 'Build' step
+      - name: Push image
         if: ${{ github.ref == 'refs/heads/master' }}
         uses: docker/build-push-action@v2
         with:
