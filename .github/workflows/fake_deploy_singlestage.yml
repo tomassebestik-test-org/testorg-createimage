@@ -5,7 +5,7 @@ env:
   IMAGE_DIR: .
   IMAGE_NAME: ghcr.io/${{ github.repository }}/fake_test_cache
   IMAGE_TAG: v1
-  IMAGE_ARCHS: linux/amd64
+  IMAGE_ARCHS: linux/amd64,linux/arm
 
 
 jobs:
