@@ -36,9 +36,10 @@ jobs:
           platforms: ${{env.IMAGE_ARCHS}}
           tags: ${{env.IMAGE_NAME}}:${{env.IMAGE_TAG}}
           # Push only when merged to master
-          push: ${{ github.ref == 'refs/heads/master'  }}
+          push: ${{ github.ref == 'refs/heads/master' }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
 
       # # Push only when merged to master; cached form 'Build' step
       # - name: Push image
